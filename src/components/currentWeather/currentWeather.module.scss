@@ -1,0 +1,42 @@
+@import "../../styles/styles";
+
+.card {
+    height: 350px;
+    min-width: 350px;
+    background-color: var(--card-bg-color);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    @include flex-column;
+    row-gap: var(--main-gap);
+
+    &__current {
+        display: grid;
+        grid-template: 1fr 115px 1fr / 1fr 1fr;
+        column-gap: var(--main-gap);
+        padding-bottom: 10px;
+        border-bottom: 1px solid #525252;
+    }
+
+    &__image {
+        grid-area: 1 / 2 / 4 / 3;
+        align-self: center;
+    }
+
+    &__weather {
+        font-size: 70px;
+        align-self: center;
+    }
+
+    &__conditions {
+        color: var(--color-white);
+    }
+
+    &__info {
+        display: flex;
+        column-gap: var(--small-gap);
+
+        &:last-child {
+            margin-top: -10px;
+        }
+    }
+}

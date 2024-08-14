@@ -1,8 +1,30 @@
 @import "./fonts.scss";
 @import "../styles/normalize.scss";
+@import "./variables.scss";
+
 body {
-    background-color: #141414;
-    color: #ffffff;
+    background-color: var(--bg-color);
+    color: var(--color-white);
     font-family: 'Ubuntu';
 }
 
+h1 {
+    font-size: 38px;
+    font-weight: 500;
+}
+h2 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--font-color);
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color:var(--font-color);
+}

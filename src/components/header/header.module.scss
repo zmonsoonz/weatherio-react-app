@@ -1,35 +1,33 @@
-
+@import "../../styles/styles";
 
 .header {
     display: flex;
     justify-content: space-between;
     padding-top: 30px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
+
     &__logo {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-    }
-    &__title {
-        font-size: 38px;
+        @include flex-center;
+        gap: var(--main-gap);
     }
 
     &__search {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        background-color: #212121;
+        @include flex-center;
+        gap: var(--main-gap);
+        background-color: var(--card-bg-color);
         padding: 10px 20px;
-        border-radius: 40px;
+        border-radius: var(--card-border-radius);
     }
 
     &__form {
+        
         &__input {
             width: 400px;
             background-color: transparent;
             border: none;
-            color: white;
+            color: var(--color-white);
             font-size: 20px;
+            outline: none;
         }
     }
 }

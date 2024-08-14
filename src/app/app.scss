@@ -1,6 +1,12 @@
-@import "../styles/globals.scss";
+@import "../styles/styles";
 
 .container {
     max-width: 1440px;
     margin: 0 auto;
+    padding-inline: 20px;
+}
+
+.section {
+    display: flex;
+    gap: 20px;
 }

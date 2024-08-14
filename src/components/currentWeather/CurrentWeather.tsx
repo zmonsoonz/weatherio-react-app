@@ -5,24 +5,22 @@ function CurrentWeather() {
     return ( 
         <article className={styles.card}>
             <div className={styles.card__current}>
-                <div className={styles.card__text}>
-                    <h2>Now</h2>
-                    <div className={styles.card__weather}>
-                        5°C
-                    </div>
-                    <h3 className={styles.card__conditions}>
-                        Clouds
-                    </h3>
+                <h2>Now</h2>
+                <div className={styles.card__weather}>
+                    5&deg;с
                 </div>
-                <Cloudy size={120}/>
+                <h3 className={styles.card__conditions}>
+                    Clouds
+                </h3>
+                <Cloudy size={100} className={styles.card__image}/>
             </div>
-            <div className={styles.card__date}>
+            <div className={styles.card__info}>
                 <Calendar/>
-                <span>Tuesday 1, Mar</span>
+                <h4>Tuesday 1, Mar</h4>
             </div>
-            <div className={styles.card__location}>
+            <div className={styles.card__info}>
                 <MapPin/>
-                <span>London, GB</span>
+                <h4>London, GB</h4>
             </div>
         </article>
     );
