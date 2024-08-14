@@ -1,4 +1,5 @@
 import CurrentWeather from "../components/currentWeather/CurrentWeather";
+import ForecastWeather from "../components/forecastWeather/ForecastWeather";
 import Header from "../components/header/Header";
 import HighlightsWeather from "../components/highlightsWeather/highlightsWeather";
 import TodayWeather from "../components/todayWeather/TodayWeather";
@@ -9,7 +10,10 @@ const App = () => {
         <div className="container">
             <Header/>
             <section className="section">
-                <CurrentWeather/>
+                <section className="flex">
+                    <CurrentWeather/>
+                    <ForecastWeather/>
+                </section> 
                 <section className="flex">
                     <HighlightsWeather/>
                     <TodayWeather/>

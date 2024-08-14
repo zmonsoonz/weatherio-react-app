@@ -1,0 +1,32 @@
+@import "../../styles/styles";
+.block {
+    @include flex-column;
+    row-gap: var(--main-gap);
+
+    &__forecast {
+        background-color: var(--card-bg-color);
+        border-radius: var(--card-border-radius);
+        padding: 30px 40px;
+    }
+
+    &__days {
+        @include flex-column;
+        row-gap: var(--small-gap);
+    }
+
+    &__day {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__weather {
+        display: flex;
+        column-gap: var(--small-gap);
+
+        &__temp {
+            font-size: 24px;
+            align-self: center;
+        }
+    }
+}
