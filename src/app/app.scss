@@ -8,5 +8,10 @@
 
 .section {
     display: flex;
-    gap: 20px;
+    gap: var(--main-gap);
+}
+
+.flex {
+    @include flex-column;
+    gap: var(--main-gap);
 }

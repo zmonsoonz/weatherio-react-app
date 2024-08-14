@@ -1,0 +1,29 @@
+@import "../../styles/styles";
+
+.block {
+    @include flex-column;
+    row-gap: var(--main-gap);
+
+    &__cards {
+        display: flex;
+        column-gap: var(--small-gap);
+    }
+
+    &__card {
+        width: 100%;
+        height: 140px;
+        background-color: var(--card-bg-color);
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    &__article {
+        @include flex-column;
+        align-items: center;
+        row-gap: var(--small-gap);
+
+        &__time {
+            color: var(--color-white);
+        }
+    }
+}
