@@ -20,6 +20,9 @@
     &__image {
         grid-area: 1 / 2 / 4 / 3;
         align-self: center;
+        @include tablet {
+            justify-self: end;
+        }
     }
 
     &__weather {

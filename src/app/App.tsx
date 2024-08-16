@@ -9,12 +9,12 @@ const App = () => {
     return (
         <div className="container">
             <Header/>
-            <section className="section">
-                <section className="flex">
+            <section className="main">
+                <section className="main__left">
                     <CurrentWeather/>
                     <ForecastWeather/>
                 </section> 
-                <section className="flex">
+                <section className="main__right">
                     <HighlightsWeather/>
                     <TodayWeather/>
                 </section>              

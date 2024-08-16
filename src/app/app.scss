@@ -4,14 +4,31 @@
     max-width: 1440px;
     margin: 0 auto;
     padding-inline: 20px;
+    @include flex-column;
+    row-gap: 100px;
+    @include tablet {
+        row-gap: 50px;
+    }
 }
 
-.section {
+.main {
     display: flex;
     gap: var(--main-gap);
-}
+    @include tablet {
+        @include flex-column;
+    }
 
-.flex {
-    @include flex-column;
-    gap: var(--main-gap);
+    &__left {
+        @include flex-column;
+        gap: var(--main-gap);
+    }
+
+    &__right {
+        @include flex-column;
+        gap: var(--main-gap);
+        width: 100%;
+        @include tablet {
+            display: contents;
+        }
+    }
 }

@@ -3,18 +3,28 @@
 .block {
     @include flex-column;
     row-gap: var(--main-gap);
-
+    width: 100%;
+    
     &__cards {
         display: flex;
-        column-gap: var(--small-gap);
+        gap: var(--small-gap);
+        @include desktop {
+            display: grid;
+            grid-template: repeat(2, 1fr) / repeat(4, 120px);
+            justify-content: space-around;
+            row-gap: 30px;
+        }
     }
 
     &__card {
-        width: 100%;
+        width: 120px;
         height: 140px;
         background-color: var(--card-bg-color);
         padding: 10px;
         border-radius: 20px;
+        @include desktop {
+            justify-self: center;
+        }
     }
 
     &__article {

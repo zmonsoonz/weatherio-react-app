@@ -44,7 +44,7 @@ function HighlightsWeather() {
                         </div>
                     </article>
                 </li>
-                <li className={styles.articles__item}>
+                <li className={[styles.articles__item, [styles.articles__item_small]].join(' ')}>
                     <article className={styles.article}>
                         <h3 className={styles.article__title}>Humidity</h3>
                         <div className={styles.article__description}>
@@ -53,7 +53,7 @@ function HighlightsWeather() {
                         </div>
                     </article>
                 </li>
-                <li className={styles.articles__item}>
+                <li className={[styles.articles__item, [styles.articles__item_small]].join(' ')}>
                     <article className={styles.article}>
                         <h3 className={styles.article__title}>Pressure</h3>
                         <div className={styles.article__description}>
@@ -62,7 +62,7 @@ function HighlightsWeather() {
                         </div>
                     </article>
                 </li>
-                <li className={styles.articles__item}>
+                <li className={[styles.articles__item, [styles.articles__item_small]].join(' ')}>
                     <article className={styles.article}>
                         <h3 className={styles.article__title}>Visibility</h3>
                         <div className={styles.article__description}>
@@ -71,7 +71,7 @@ function HighlightsWeather() {
                         </div>
                     </article>
                 </li>
-                <li className={styles.articles__item}>
+                <li className={[styles.articles__item, [styles.articles__item_small]].join(' ')}>
                     <article className={styles.article}>
                         <h3 className={styles.article__title}>Feels like</h3>
                         <div className={styles.article__description}>

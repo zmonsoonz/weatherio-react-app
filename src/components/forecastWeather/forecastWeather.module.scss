@@ -6,7 +6,7 @@
     &__forecast {
         background-color: var(--card-bg-color);
         border-radius: var(--card-border-radius);
-        padding: 30px 40px;
+        padding: 30px var(--card-padding);
     }
 
     &__days {
