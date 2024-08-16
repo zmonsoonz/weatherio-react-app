@@ -9,6 +9,10 @@
         gap: var(--main-gap);
         padding-top: 20px;
     }
+    @include mobile-l {
+        padding-top: 10px;
+        gap: var(--small-gap);
+    }
 
     &__logo {
         @include flex-center;
@@ -28,14 +32,18 @@
 
     }
 
-    &__form {
-        &__input {
-            width: 421px;
-            background-color: transparent;
-            border: none;
-            color: var(--color-white);
-            font-size: 20px;
-            outline: none;
+    &__input {
+        width: 421px;
+        background-color: transparent;
+        border: none;
+        color: var(--color-white);
+        font-size: 20px;
+        outline: none;
+        @include mobile-l {
+            width: 300px;
+        }
+        @include mobile-s {
+            width: 236px;
         }
     }
 }

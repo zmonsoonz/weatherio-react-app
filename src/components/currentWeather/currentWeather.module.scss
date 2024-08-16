@@ -1,18 +1,23 @@
 @import "../../styles/styles";
 
 .card {
-    height: 350px;
+    height: auto;
     min-width: 350px;
     background-color: var(--card-bg-color);
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
     @include flex-column;
     row-gap: var(--main-gap);
+    @include mobile-s {
+        padding: 30px 20px;
+        min-width: 250px;
+    }
 
     &__current {
         display: grid;
-        grid-template: 1fr 115px 1fr / 1fr 1fr;
+        grid-template: 1fr 115px 1fr / 100px 100px;
         column-gap: var(--main-gap);
+        justify-content: space-between;
         padding-bottom: 10px;
         border-bottom: 1px solid #525252;
     }
@@ -20,9 +25,6 @@
     &__image {
         grid-area: 1 / 2 / 4 / 3;
         align-self: center;
-        @include tablet {
-            justify-self: end;
-        }
     }
 
     &__weather {

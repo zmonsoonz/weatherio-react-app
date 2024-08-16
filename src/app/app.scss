@@ -9,11 +9,15 @@
     @include tablet {
         row-gap: 50px;
     }
+    @include mobile-s {
+        row-gap: 30px;
+    }
 }
 
 .main {
     display: flex;
     gap: var(--main-gap);
+    padding-bottom: 20px;
     @include tablet {
         @include flex-column;
     }

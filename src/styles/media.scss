@@ -4,6 +4,12 @@ $desktop-above: 1440px;
 $tablet: 958px;
 $tablet-above: 959px;
 
+$mobile-l: 595px;
+$mobile-l-above: 596px;
+
+$mobile-s: 424px;
+$mobile-s-above: 425px;
+
 @mixin desktop-above {
     @media (min-width: $desktop-above) {
         @content;
@@ -24,6 +30,30 @@ $tablet-above: 959px;
 
 @mixin tablet {
     @media (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin mobile-l-above {
+    @media (min-width: $mobile-l-above) {
+        @content;
+    }
+}
+
+@mixin mobile-l {
+    @media (max-width: $mobile-l) {
+        @content;
+    }
+}
+
+@mixin mobile-s-above {
+    @media (min-width: $mobile-s-above) {
+        @content;
+    }
+}
+
+@mixin mobile-s {
+    @media (max-width: $mobile-s) {
         @content;
     }
 }
