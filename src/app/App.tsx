@@ -6,6 +6,8 @@ import TodayWeather from "../components/todayWeather/TodayWeather";
 import './app.scss';
 
 const App = () => {
+
+
     return (
         <div className="container">
             <Header/>
