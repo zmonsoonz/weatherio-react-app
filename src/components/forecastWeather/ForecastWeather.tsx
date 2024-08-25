@@ -3,7 +3,7 @@ import styles from "./forecastWeather.module.scss";
 function ForecastWeather() {
     return ( 
         <div className={styles.block}>
-            <h2 className={styles.block__title}>5 Days Forecast</h2>
+            <h2 className={styles.block__title}>Прогноз на 5 дней</h2>
             <div className={styles.block__forecast}>
                 <ul className={styles.block__days}>
                     <li className={styles.block__day}>

@@ -11,7 +11,7 @@ const Header = () => {
             <div className={styles.header__search}>
                 <Search/>
                 <form className={styles.header__form}>
-                    <input type="text" className={styles.header__input} placeholder="Search city..."/>
+                    <input type="text" className={styles.header__input} placeholder="Найти город"/>
                 </form>
             </div>
         </header>
