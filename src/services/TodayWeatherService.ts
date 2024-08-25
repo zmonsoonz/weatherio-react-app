@@ -11,9 +11,8 @@ const useTodayWeatherService = () => {
     const _apiId = "appid=9651bcc737b51f380d2855123d3ad63a";
 
     const getCurrentWeather = async () => {
-        const res = await request(`${_apiBase}data/2.5/weather?q=London&units=metric&${_apiId}`)
+        const res = await request(`${_apiBase}data/2.5/weather?q=Moscow&units=metric&${_apiId}`)
         const date = parseDate(res.dt);
-        console.log(date);
         return {
             id: res.weather[0].id,
             weather: res.weather[0].main,
@@ -25,7 +24,7 @@ const useTodayWeatherService = () => {
     }
 
     const getWeatherHighlights = async () => {
-        const res = await request(`${_apiBase}data/2.5/weather?q=London&units=metric&${_apiId}`)
+        const res = await request(`${_apiBase}data/2.5/weather?q=Moscow&units=metric&${_apiId}`)
         return {
             humidity: res.main.humidity,
             pressure: res.main.pressure,
@@ -48,7 +47,7 @@ const useTodayWeatherService = () => {
     }
 
     const getHourlyWeather = async () => {
-        const res = await request(`${_apiBase}data/2.5/forecast?q=London&units=metric&cnt=9&${_apiId}`)
+        const res = await request(`${_apiBase}data/2.5/forecast?q=Moscow&units=metric&cnt=9&${_apiId}`)
         return res.list.slice(1).map(sortHoursList)
     }
 
@@ -66,11 +65,38 @@ const useTodayWeatherService = () => {
         return (`${weekdays[strDate.getDay()]} ${strDate.getDate()}, ${months[strDate.getMonth()]}`)
     }
 
-    // const parseForecast = (item: any) => {
-    //     if (new Date(item.dt_txt).getHours() === 12 && new Date(item.dt_txt).getDate() != Date.now().getDate())
-    // }
+    const getForecast = async () => {
+        const res = await request(`${_apiBase}data/2.5/forecast?q=Moscow&units=metric&${_apiId}`)
+        console.log(res.list.map(mapForecast))
+        return res.list.filter(filterForecast).map(mapForecast)
+    }
 
-    return {getCurrentWeather, getWeatherHighlights, getWindHighlights, getHourlyWeather}
+    const filterForecast = (item: any) => {
+        if (new Date(item.dt_txt).getHours() === 12 && new Date(item.dt_txt).getDate() != new Date().getDate()) {
+            // const date = new Date(item.dt * 1000)
+            // return {
+            //     day: date.getDate(),
+            //     month: months[date.getMonth()],
+            //     weekday: weekdays[date.getDay()],
+            //     weather: item.weather[0].main,
+            //     temp: Math.round(item.main.temp)
+            // }
+            return item
+        }
+    }
+
+    const mapForecast = (item: any) => {
+        const date = new Date(item.dt * 1000)
+        return {
+            day: date.getDate(),
+            month: months[date.getMonth()].slice(0, 3),
+            weekday: weekdays[date.getDay()],
+            weather: item.weather[0].main,
+            temp: Math.round(item.main.temp)
+        }
+    }
+
+    return {getCurrentWeather, getWeatherHighlights, getWindHighlights, getHourlyWeather, getForecast}
 }
 
 export default useTodayWeatherService;
