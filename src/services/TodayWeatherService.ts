@@ -22,6 +22,7 @@ const useTodayWeatherService = () => {
             country: res.sys.country
         }
     }
+    
 
     const getWeatherHighlights = async () => {
         const res = await request(`${_apiBase}data/2.5/weather?q=Moscow&units=metric&${_apiId}`)
