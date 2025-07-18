@@ -1,5 +1,5 @@
 
-import DateUtil from "../components/utils/Date";
+import DateUtil from "../utils/Date";
 import { useFetch } from "../hooks/useFetch";
 
 const useTodayWeatherService = () => {
