@@ -4,6 +4,13 @@
     display: flex;
     justify-content: space-between;
     padding-top: 30px;
+    margin-bottom: 100px;
+    @include tablet {
+        margin-bottom: 50px;
+    }
+    @include mobile-s {
+        margin-bottom: 30px;
+    }
     @include tablet {
         @include flex-column;
         gap: var(--main-gap);

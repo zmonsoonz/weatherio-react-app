@@ -11,7 +11,6 @@ function ForecastWeather() {
 
     useEffect(() => {
         getForecast().then((res) => setForecast(res))
-        console.log(1)
     }, [])
 
     const renderForecast = (list:any) => {

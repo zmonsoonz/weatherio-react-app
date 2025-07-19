@@ -1,0 +1,64 @@
+@import "../../styles/styles";
+
+.footer {
+    display: flex;
+    margin-block: auto 30px;
+    &__links {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        column-gap: 50px;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__title {
+            margin-top: 5px
+        }
+    }
+    // @include tablet {
+    //     @include flex-column;
+    //     gap: var(--main-gap);
+    //     padding-top: 20px;
+    // }
+    // @include mobile-l {
+    //     padding-top: 10px;
+    //     gap: var(--small-gap);
+    // }
+
+    // &__logo {
+    //     @include flex-center;
+    //     gap: var(--main-gap);
+    // }
+
+    // &__search {
+    //     @include flex-center;
+    //     gap: var(--main-gap);
+    //     background-color: var(--card-bg-color);
+    //     padding: 10px 20px;
+    //     border-radius: var(--card-border-radius);
+    //     @include tablet {
+    //         margin-inline: auto;
+    //         padding-block: 15px;
+    //     }
+
+    // }
+
+    // &__input {
+    //     width: 421px;
+    //     background-color: transparent;
+    //     border: none;
+    //     color: var(--color-white);
+    //     font-size: 20px;
+    //     outline: none;
+    //     @include mobile-l {
+    //         width: 300px;
+    //     }
+    //     @include mobile-s {
+    //         width: 236px;
+    //     }
+    // }
+}

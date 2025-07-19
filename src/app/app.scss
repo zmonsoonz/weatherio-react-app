@@ -2,16 +2,10 @@
 
 .container {
     max-width: 1440px;
+    min-height: 100vh;
     margin: 0 auto;
     padding-inline: 20px;
     @include flex-column;
-    row-gap: 100px;
-    @include tablet {
-        row-gap: 50px;
-    }
-    @include mobile-s {
-        row-gap: 30px;
-    }
 }
 
 .main {

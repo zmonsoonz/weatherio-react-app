@@ -97,7 +97,12 @@ const useTodayWeatherService = () => {
         }
     }
 
-    return {getCurrentWeather, getWeatherHighlights, getWindHighlights, getHourlyWeather, getForecast}
+    const getLinks = async () => {
+        const res = await request(`http://127.0.0.1:8000/links`)
+        return res
+    }
+
+    return {getCurrentWeather, getWeatherHighlights, getWindHighlights, getHourlyWeather, getForecast, getLinks}
 }
 
 export default useTodayWeatherService;
